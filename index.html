@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<style>
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.container {
+width: 80%;
+height: 80%;
+position: absolute;    
+margin:auto;
+top:0;
+bottom:0;
+left:0;
+right:0;}
+
+</style>
+<html>
+<head>
+  <title>change picture</title>
+  <script type = "text/javascript">
+
+        function zeroPad(num, places) {
+          var zero = places - num.toString().length + 1;
+          return Array(+(zero > 0 && zero)).join("0") + num;
+        }
+
+
+      function displayNextImage() {
+          x = (x === 2000) ? 1 : x + 1;
+          document.getElementById("img").src = "http://ridelondon.x10host.com/images." + zeroPad(x, 6) + ".jpg";
+      }
+      function changeImage() {
+          setInterval(displayNextImage, 2000);
+      }
+      var dt = new Date();
+      var secs = dt.getSeconds() + (60 * dt.getMinutes()) + (60 * 60 * dt.getHours());
+
+      x = secs % 2000;
+
+  </script>
+  </head>
+  <body onload = "changeImage()">
+  <div class="container">
+   <img id="img"/>
+   </div>
+
+
+
+<div style="position:relative;width:267px;height:25px;overflow:hidden;">
+<div style="position:absolute;top:-276px;left:-5px">
+<iframe width="0" height="315" src="https://www.youtube.com/embed/hX3j0sQ7ot8?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+
+
+  </body>
+
+
+
+  </html>
