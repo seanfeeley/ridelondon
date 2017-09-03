@@ -43,10 +43,11 @@ right:0;}
       function changeImage() {
           setInterval(displayNextImage, 2000);
       }
-      var dt = new Date();
-      var secs = dt.getSeconds() + (60 * dt.getMinutes()) + (60 * 60 * dt.getHours());
+    var dt = new Date();
 
-      x = (13906 + ((secs - 32400)/2)) % 13906;
+    var secs = dt.getSeconds() + (60 * dt.getMinutes()) + (60 * 60 * dt.getHours());
+
+    x = (((Math.floor((secs - 32400)/2)) % 13906) + 13906 ) % 13906;
 
   </script>
   </head>
