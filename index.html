@@ -14,6 +14,27 @@ img {
     max-width: 100%;
 }
 
+.outer {
+    display: table;
+    width: 95%;
+height: 95%;   
+margin:auto;
+}
+
+.middle {
+    display: table-cell;
+
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto; 
+
+    width: /*whatever width you want*/;
+}
+
+
 .container {
 width: 80%;
 height: 80%;
@@ -53,19 +74,26 @@ right:0;}
   </script>
   </head>
   <body onload = "changeImage()">
-  <div class="container">
-   <img id="img"/>
-   </div>
+  
 
 
 
-<div style="position:relative;width:267px;height:25px;overflow:hidden;">
+<div style="position:relative;width:267px;height:0px;overflow:hidden;">
 <div style="position:absolute;top:-276px;left:-5px">
 <iframe width="0" height="315" src="https://www.youtube.com/embed/hX3j0sQ7ot8?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
 
+<div class="outer">
+  <div class="middle">
+    <div class="inner">
 
+   
+   <img id="img"/>
+  
+    </div>
+  </div>
+</div>
 
   </body>
 
